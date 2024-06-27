@@ -1,9 +1,28 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { homeRoutes } from './Home.routes';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Layout from '../components/Layout';
+import { homeRoutes } from './home.routes';
+import { reservationRoutes } from './reservation.routes';
+import { AppProvider } from '../store';
 
 export default function AppRouter() {
-  const router = createBrowserRouter([
-    ...homeRoutes
-  ])
-  return (<RouterProvider router={router} />);
+  const routes = [
+    {
+      path: '/',
+      element: (<>
+        <Layout />
+        <Outlet />
+      </>),
+      children: [
+        ...homeRoutes,
+        ...reservationRoutes
+      ],
+    }
+  ];
+
+  const router = createBrowserRouter(routes)
+  return (
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  );
 };

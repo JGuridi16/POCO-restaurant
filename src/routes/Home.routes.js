@@ -2,7 +2,7 @@ import Home from '../views/Home';
 
 const homeRoutes = [
   {
-    path: '/',
+    index: true,
     element: <Home />,
   },
 ];
