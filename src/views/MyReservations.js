@@ -1,9 +1,24 @@
 import React, { useContext } from "react";
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Button } from "react-bootstrap";
 import { AppContext } from "../store";
+import { Bounce, toast } from 'react-toastify';
 
 export default function MyReservations() {
   const { myReservations } = useContext(AppContext);
+
+  const dropReservationById = (reservationId) => {
+    toast.success('Reservación removida', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  };
 
   return (
     <Container className="mt-4 mx-auto">
@@ -15,6 +30,7 @@ export default function MyReservations() {
             <th>Cédula</th>
             <th>Desde</th>
             <th>Hasta</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +41,13 @@ export default function MyReservations() {
               <td>{ item.documentId }</td>
               <td>{ item.fromTime }</td>
               <td>{ item.toTime }</td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <Button onClick={() => dropReservationById(item.id)} variant="danger" className="fw-bold" size="sm">
+                    🗑
+                  </Button>    
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
