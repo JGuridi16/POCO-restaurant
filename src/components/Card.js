@@ -6,7 +6,7 @@ export default function ReservationCard({ item }) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <Card className="p-2 my-1">
+    <Card className="p-2 my-1 shadow-sm">
       <ReservationModal
         item={item}
         show={modalShow}
