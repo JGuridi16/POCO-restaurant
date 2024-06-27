@@ -54,17 +54,17 @@ export default function ReservationModal({ item, show, onHide }) {
     };
     setMyReservations([...myReservations, newReservation])
     setShowModal(false);
-    toast.success('Guardado exitosamente!.', {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
+    // toast.success('Guardado exitosamente!.', {
+    //   position: "top-right",
+    //   autoClose: 3000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: false,
+    //   progress: undefined,
+    //   theme: "light",
+    //   transition: Bounce,
+    // });
   };
 
   useEffect(() => {
