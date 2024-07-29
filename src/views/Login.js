@@ -89,7 +89,7 @@ const Login = () => {
               <input type="password" className="form-control" id="password" name='password' onChange={(e) => onChangeUserInput(e.target.name, e.target.value)} onKeyDown={onTriggerClick} />
               <div id="password" className="form-text">Escribe tu contraseña</div>
             </div>
-            <button className="btn btn-success" onClick={handleLogin}>Login</button>
+            <button className="btn btn-success" onClick={handleLogin}>Acceder</button>
           </div>
         </div>
       </div>
