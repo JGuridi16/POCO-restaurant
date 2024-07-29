@@ -81,15 +81,15 @@ const Login = () => {
           <div className='card p-5'>
             <div className="mb-3">
               <label htmlFor="inputUsername" className="form-label">Usuario</label>
-              <input type="text" className="form-control" id="username" name='username' onChange={(e) => onChangeUserInput(e.target.name, e.target.value)} onKeyDown={onTriggerClick} />
+              <input data-testid="username" type="text" className="form-control" id="username" name='username' onChange={(e) => onChangeUserInput(e.target.name, e.target.value)} onKeyDown={onTriggerClick} />
               <div id="username" className="form-text">Escribe tu nombre de usuario</div>
             </div>
             <div className="mb-3">
               <label htmlFor="inputPassword" className="form-label">Contraseña</label>
-              <input type="password" className="form-control" id="password" name='password' onChange={(e) => onChangeUserInput(e.target.name, e.target.value)} onKeyDown={onTriggerClick} />
+              <input data-testid="password" type="password" className="form-control" id="password" name='password' onChange={(e) => onChangeUserInput(e.target.name, e.target.value)} onKeyDown={onTriggerClick} />
               <div id="password" className="form-text">Escribe tu contraseña</div>
             </div>
-            <button className="btn btn-success" onClick={handleLogin}>Acceder</button>
+            <button data-testid="log_user" className="btn btn-success" onClick={handleLogin}>Acceder</button>
           </div>
         </div>
       </div>
