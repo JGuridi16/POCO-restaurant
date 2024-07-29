@@ -75,7 +75,7 @@ const Login = () => {
     <div className='container-fluid d-flex justify-content-center align-items-center vh-100'>
       <div className='row justify-content-center align-items-center'>
         <div className='col-12 text-center'>
-          <h1>Incio de sesión</h1>
+          <h1>Inicio de sesión</h1>
         </div>
         <div className='col-12'>
           <div className='card p-5'>
