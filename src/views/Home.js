@@ -15,7 +15,7 @@ export default function Home() {
         <Col md="4" className="banner p-5 d-flex align-items-center justify-content-center">
           <Row>
             <Col md="12" className="mb-5">
-              <h1 className="banner-title text-white fw-bold">Bienvenid@ { user?.name + ' ' + user?.lastname }</h1>
+              <h1 data-testid="user-banner" className="banner-title text-white fw-bold">Bienvenid@ { user?.name + ' ' + user?.lastname }</h1>
             </Col>
             <Col md="12">
               <h3 className="banner-title text-white fw-bold">Compartir es vivir</h3>

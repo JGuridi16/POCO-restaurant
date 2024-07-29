@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from '../store/auth';
@@ -14,6 +14,8 @@ export default function Layout() {
   const logoutHandler = () => {
     logout();
   };
+
+  useEffect(() => {}, [JSON.stringify(user)]);
 
   return (
     <Navbar expand="lg" className="app-nav bg-white shadow-sm">
@@ -35,10 +37,10 @@ export default function Layout() {
             </Nav.Link>
           </Nav>
           <Nav className="me-end">
-            <div className="d-flex justify-content-center align-items-center px-3">
+            <div data-testid="email-data" className="d-flex justify-content-center align-items-center px-3">
               { user?.email }
             </div>
-            <Button as={NavLink} onClick={logoutHandler}>
+            <Button data-testid="logout-btn" as={NavLink} onClick={logoutHandler}>
               Cerrar sesión
             </Button>
           </Nav>
