@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { availableTables } from "../store/dummy";
+import { availableTables } from "../store/data/reservations";
 import ReservationCard from "../components/Card";
 
 export default function Reservation() {

@@ -1,14 +1,19 @@
 import MyReservations from '../views/MyReservations';
 import Reservation from '../views/Reservation';
+import PrivateRoute from './private.routes';
 
 const reservationRoutes = [
   {
     path: '/online-reservation',
-    element: <Reservation />
+    element: <PrivateRoute>
+      <Reservation />
+    </PrivateRoute>,
   },
   {
     path: '/my-reservations',
-    element: <MyReservations />
+    element: <PrivateRoute>
+      <MyReservations />
+    </PrivateRoute>,
   },
 ];
 

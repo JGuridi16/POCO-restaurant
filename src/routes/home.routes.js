@@ -1,9 +1,13 @@
 import Home from '../views/Home';
+import PrivateRoute from './private.routes';
 
 const homeRoutes = [
   {
     index: true,
-    element: <Home />,
+    path: '/home',
+    element: <PrivateRoute>
+      <Home />
+    </PrivateRoute>,
   },
 ];
 
